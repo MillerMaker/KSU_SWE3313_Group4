@@ -1,0 +1,45 @@
+CREATE TABLE STAFF (
+StaffID int NOT NULL IDENTITY(1,1),
+Name VarChar(15) NOT NULL,
+Username VarChar(10) NOT NULL,
+Password VarChar(10) NOT NULL
+)
+
+CREATE TABLE CUSTOMER (
+CustomerID int NOT NULL IDENTITY(1,1),
+FirstName VarChar(10) NOT NULL,
+LastName VarChar(10) NOT NULL,
+Username VarChar(10) NOT NULL,
+Password VarChar(10) NOT NULL
+)
+
+CREATE TABLE ORDERINFO (
+OrderID int NOT NULL IDENTITY(1,1),
+CustomerID VarChar(10) NOT NULL,
+Price Money NULL,
+)
+
+CREATE TABLE OPTIONS (
+OptionID int NOT NULL IDENTITY(1,1),
+Name VarChar(10) NOT NULL,
+Price Money NULL
+)
+
+CREATE TABLE ITEM (
+ItemID int NOT NULL IDENTITY(1,1),
+Name VarChar NOT NULL,
+Price Money NOT NULL,
+Photo VarChar NULL,
+)
+
+CREATE TABLE ITEMOPTION (
+ItemID int NOT NULL,
+OptionID int NOT NULL
+)
+
+CREATE TABLE CUSTOMERSELECT (
+OrderID int NOT NULL,
+ItemID int NOT NULL,
+OptionID int NULL,
+ItemQuantity int NOT NULL
+)
