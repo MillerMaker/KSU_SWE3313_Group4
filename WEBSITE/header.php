@@ -1,3 +1,7 @@
+<?php
+	session_start();
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -17,7 +21,14 @@
        <img src = "https://i.pinimg.com/originals/f9/7d/58/f97d58467d1d2ecd4171451db6f954ff.png" alt="Banner" width = 100% height = 200px>
      <h1>
       <a class = "Home" href="Home.php">Between The Buns</a></h1> 
-  <a class="AccountLogin" href="Account_login.php">Account Login</a>
+	  <?php
+	  if(isset($_SESSION["customerID"])) {
+		echo "<a class='AccountLogout' href='includes//Logout.inc.php'>LogOut</a>";
+		echo "<a class='Profile' href='menu.php'>Profile</a>";
+	  } else {
+		  echo "<a class='AccountLogin' href='Account_login.php'>Account Login</a>";
+	  }
+	  ?>
   <a class = "Cart" href= "Cart.php"><ion-icon name ="cart-outline"></ion-icon> Cart <span></span></a>
   <div class = "navbar">
   <a href="Menu.php">Menu</a>

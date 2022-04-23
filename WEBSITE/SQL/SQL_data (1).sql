@@ -10,7 +10,7 @@ StaffID INTEGER NOT NULL Primary KEY AUTO_INCREMENT,
 FirstName VarChar(15) NOT NULL,
 LastName VarChar(10) NOT NULL,
 Username VarChar(10) NOT NULL,
-UserPassword VarChar(10) NOT NULL
+UserPassword VarChar(128) NOT NULL
 );
 
 CREATE TABLE CUSTOMER (
@@ -18,7 +18,7 @@ CustomerID INTEGER NOT NULL Primary KEY AUTO_INCREMENT,
 FirstName VarChar(10) NOT NULL,
 LastName VarChar(10) NOT NULL,
 Username VarChar(10) NOT NULL,
-UserPassword VarChar(10) NOT NULL
+UserPassword VarChar(128) NOT NULL
 );
 
 CREATE TABLE ORDERINFO (

@@ -1,19 +1,19 @@
-<?php session_start();
+<?php 
 	include_once 'header.php';
 ?>
 	
-    <p >Account Login in</p>
-<form action="Account_login.php" method="post">
+    <p >Account Login</p>
+<form action="includes//Login.inc.php" method="post">
   <label for "user_name"> User Name</label><br>
   <input type ="text" id="username" name="username"><br><br>
-  <label for "password">Password</label></br>
+  <label for "password"> Password</label></br>
   <input type ="password" id="password" name="password"><br><br>
-  <input type="Submit" value ="Search"><br><br>
+  <button type = "submit" name = "submit" > Log In </button>
   </form>
   
-  <form action="Account_login.php" method="post">
+  <form action="Account_signup.php" method="post">
    <label for "New account">Don't have an account</label><br>
-	<input type="Submit" value ="Creat New Account">
+	<input type="Submit" value ="Create New Account">
 	</form>
 
 
